@@ -1,0 +1,23 @@
+{
+    "name": "tree-view",
+    "version": "1.0.0",
+    "description": "A basic Electron-Hero with Tree-View",
+    "main": "mainWindow.json",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/electron-hero-apps/tree-view"
+    },
+    "keywords": [
+        "electron-hero",
+        "electron"
+    ],
+    "author": "John M. Anderson",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/electron-hero-apps/tree-view/issues"
+    },
+    "homepage": "https://github.com/electron-hero-apps/tree-view#readme"
+}

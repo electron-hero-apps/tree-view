@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Starter - Tree-View</title>
+    <link rel="stylesheet" href="https://www.electron-hero.com/cdn/photon/photon.min.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<script>
+    const ipc = require('electron').ipcRenderer
+    let nodeRequirePath = ipc.sendSync('getRequirePath') + 'node_modules/';
+    window.$ = window.jQuery = require(nodeRequirePath + 'jquery');
+    var path = require(nodeRequirePath + 'path');
+    var fs = require('fs');
+    var _ = require(nodeRequirePath + 'lodash');
+</script>
+<script src="tree-view.js"></script>
+<script>
+    buildTreeView('#files', __dirname)
+</script>
+
+<body>
+    <div class="window">
+        <div class="window-content">
+            <div class="pane-group">
+
+                <div id="navPane" class="pane-sm sidebar">
+                    <nav class="nav-group">
+                        <h5 class="nav-group-title">Files</h5>
+                    </nav>
+                    <div id="files">
+                    </div>
+                </div>
+
+                <div class="pane">
+                    <div class="fileInfo">
+                        <div class="fileType"></div>
+                        <div class="filePath"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="toolbar toolbar-footer">
+            <h1 class="title">Footer</h1>
+        </footer>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $(document).on('click', '.icon.opener', handleOpenerClick);
+        $(document).on('click', '.nav-item-text', handleItemClick);
+        $(document).on('click', '.clickable-nav-item', handleFileItemClick);
+    });
+</script>
+</html>

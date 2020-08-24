@@ -1,0 +1,59 @@
+#leftDiv {
+    float: left;
+    margin-left: 15px;
+}
+
+#rightDiv {
+    float: right;
+    margin-right: 0px;
+}
+
+
+.pane-sm {
+    width: 30%;
+    max-width: 30%;
+    overflow: auto;
+}
+
+.pane {
+    width: 70%;
+    max-width: 70%;
+}
+
+.fileInfo {
+    margin: 30px;
+}
+
+.fileType, .filePath {
+    margin-top: 20px
+}
+
+
+.nav-group-item .icon {
+    color: #929bab;
+    margin-right: 2px;
+}
+
+.nav-group-title {
+    color: #929bab;
+}
+
+span.nav-group-item {
+    padding-left: 0px;
+}
+
+.nav-item-text {
+    margin-left: 5px;
+}
+
+.one-deep {
+    margin-left: 22px;
+}
+
+.nav-group-item:active, .nav-group-item.active {
+    background-color: transparent;
+}
+
+.file-active {
+    background-color: #ddd !important;
+}
